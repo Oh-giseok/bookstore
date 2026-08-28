@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.header-top{
+    padding: 16px 18px 8px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo svg{
+    width: 60px;
+    height: 22px;
+}
+
+.header-top .header-right{
+    display: flex;
+}
+
+.header-top .header-right .header-search{
+    color: #a5a5a5;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.header-top .header-right .header-search label{
+    background: #f5f5f5;
+    border: 1px solid rgba(0, 0, 0, 0.5%);    
+    padding: 10px;
+    height: 40px;
+}
+
+.header-top .header-right .header-join a{    
+    padding: 11px 12px 11px 22px;
+    color: #787878;
+    font-weight: 600;
+    font-size: 14px;    
+    letter-spacing: -0.01em;
+}
