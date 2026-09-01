@@ -1,7 +1,19 @@
 @charset "utf-8";
 
-body{
-    /* 폰트 설정 */
+@font-face {
+    font-family: "Pretendard Variable";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("https://static.ridicdn.net/web-font/pretendard/PretendardVariable.subset.0.woff2");
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: "Pretendard Variable", sans-serif;
 }
 
 .skip-nav {
@@ -15,14 +27,135 @@ body{
     top: 0;
 }
 
-header{
-    width: 1120px;    
-    max-width: 1120px;
-    height: 116px;
-    margin: 0 auto;
-    /* background-color: gold; */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-footer{
-    
+.line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    box-sizing: border-box;
+    border: none;
+    background: #f0f0f0;
+}
+
+/* Header */
+header {
+    width: 1170px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    background: #ffffff;
+    padding-top: 100px;
+}
+
+.footer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 41px 26px 20px;
+}
+
+.footer-wrap .footer-inner{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-wrap .footer-inner > .footer-top {
+    display: flex;
+}
+
+.footer-wrap .footer-inner div > ul {
+    min-width: 185px;
+}
+
+.footer-wrap .footer-inner > div > ul > li a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #787878;
+}
+
+.footer-wrap .footer-inner > div > ul > li a svg * {
+    color: #787878;
+}
+
+.footer-wrap .footer-inner > div > ul > li + li {
+    margin-top: 20px;
+}
+
+.footer-wrap .footer-inner > div > div {
+    flex-direction: column;
+}
+
+.footer-wrap .footer-inner .footer-top p {
+    padding: 4px 0;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #787878;
+}
+
+.footer-wrap .footer-inner .footer-top > div ul li a {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #787878;
+}
+
+.footer-wrap .footer-inner .footer-top > div ul li + li {
+    margin-top: 6px;
+}
+
+.footer-wrap .footer-sns ul{
+    display: flex;
+}
+
+.footer-wrap .footer-sns ul li + li{
+    margin-left: 10px;
+}
+
+.footer-wrap .footer-sns ul li a{
+    width: 44px;
+    height: 44px;    
+    display: inline-flex;
+    justify-content: center;    
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 22px;
+}
+
+.footer-company{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-company > button{
+    background: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 }

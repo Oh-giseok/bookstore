@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">    
+    <link rel="stylesheet" href="./css/main.css">   
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
 </head>
 <body>
     <a href="#main" class="skip-nav">본문 바로가기</a>
@@ -20,24 +22,379 @@
                     </a>                    
                     <div class="header-right">
                         <div class="header-search">
-                            <label>                                
+                            <label>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 20 20" class="fig-1i7afuk"><path fill-rule="evenodd" d="M13.28 8.18a5.1 5.1 0 1 1-10.2 0 5.1 5.1 0 0 1 10.2 0m-1.031 5.069a6.5 6.5 0 1 1 .991-.989l4.695 4.695a.7.7 0 1 1-.99.99z"></path></svg>
+
                                 <input type="search">
+
+                                <!-- X 버튼 -->
+                                <button type="button" class="search-clear" aria-label="지우기">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="1em"
+                                        height="1em"
+                                        fill="none"
+                                        viewBox="0 0 16 16"
+                                        aria-hidden="true">
+                                        <path fill="currentColor"
+                                            fill-rule="evenodd"
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.076 5.076a.6.6 0 0 1 .848 0L8 7.15l2.076-2.075a.6.6 0 0 1 .848.848L8.85 8l2.075 2.076a.6.6 0 0 1-.848.848L8 8.85l-2.076 2.075a.6.6 0 1 1-.848-.848L7.15 8 5.076 5.924a.6.6 0 0 1 0-.848"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </button>
+
                                 <button type="button">검색</button>
                             </label>
                         </div>
 
                         <div class="header-join">
-                            <a href="">로그인/회원가입</a>
+                            <a href="">로그인 / 회원가입</a>
                         </div>
                     </div>
                 </div>
+                <div class="header-bottom">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">만화</a>
+                            </li>
+                            <li>
+                                <a href="#">웹툰</a>
+                            </li>
+                            <li>
+                                <a href="#">웹소설</a>
+                            </li>
+                            <li>
+                                <a href="#">도서</a>
+                            </li>
+                            <li>
+                                <a href="#">리디샵</a>
+                            </li>
+                            <li>
+                                <a href="#">셀렉트</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="fig-zt3wi2"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M4.5 7h15M4.5 12h15M4.5 17h15"></path></svg>
+                                    <span>전체 카테고리</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" aria-label="리디 캐시 충전" class="fig-jdb16z"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.4"></circle><path fill="currentColor" d="M9.75 12.1a2.28 2.28 0 0 1 2.292-2.267c.626 0 1.192.248 1.605.65a.65.65 0 1 0 .906-.933 3.6 3.6 0 0 0-2.511-1.017c-1.979 0-3.592 1.592-3.592 3.567s1.614 3.567 3.592 3.567c.976 0 1.862-.387 2.51-1.015a.65.65 0 1 0-.906-.933 2.3 2.3 0 0 1-1.604.648A2.28 2.28 0 0 1 9.75 12.1"></path></svg>
+                                    <span>캐시충전</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </header>
-        </div>               
+            <hr class="line">
+            <div class="tab-menu">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#" class="on">추천</a>
+                        </li>
+                        <li>
+                            <a href="#">기획전</a>
+                        </li>
+                        <li>
+                            <a href="#">소설</a>
+                        </li>
+                        <li>
+                            <a href="#">인문/사회/역사</a>
+                        </li>
+                        <li>
+                            <a href="#">경영/경제</a>
+                        </li>
+                        <li>
+                            <a href="#">자기계발</a>
+                        </li>
+                        <li>
+                            <a href="#">에세이/시</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="main-swiper">
+            <div class="main-swiper__container swiper">
+                <div class="main-swiper__wrapper swiper-wrapper">
+                    <div class="main-swiper__slide swiper-slide">                        
+                        <a href="#">
+                            <img class="main-swiper__thumbnail" src="//active.ridibooks.com/ridibooks_banner/27756d26-fe99-4f16-80d7-eccf3130651a.jpg" alt="더 골">
+                            <div>
+                                <h3 class="main-swiper__title">&lt;더 골&gt; 전권 50년 대여 세트</h3>
+                                <p class="main-swiper__description">개정판 출간 기념 할인전</p>
+                            </div>                                                    
+                        </a>                        
+                    </div>
+                    <div class="main-swiper__slide swiper-slide">                        
+                        <a href="#">
+                            <img class="main-swiper__thumbnail" src="//active.ridibooks.com/ridibooks_banner/adad7bf9-34ce-458b-bf8e-214b26d3a463.jpg" alt="오디세이">
+                            <div>
+                                <h3 class="main-swiper__title">'오디세이' 개봉 기념 <br> 고전 특가 대여전</h3>
+                                <p class="main-swiper__description">추가 할인 쿠폰 + 리뷰 전원 포인트</p>
+                            </div>                                                    
+                        </a>                        
+                    </div>
+                    <div class="main-swiper__slide swiper-slide">                        
+                        <a href="#">
+                            <img class="main-swiper__thumbnail" src="//active.ridibooks.com/ridibooks_banner/f3c57264-1a45-4e75-afaa-e1715ea1c854.jpg" alt="더 골">
+                            <div>
+                                <h3 class="main-swiper__title">&lt;더 골&gt; 전권 50년 대여 세트</h3>
+                                <p class="main-swiper__description">개정판 출간 기념 할인전</p>
+                            </div>                                                    
+                        </a>                        
+                    </div>
+                    <div class="main-swiper__slide swiper-slide">                        
+                        <a href="#">
+                            <img class="main-swiper__thumbnail" src="//active.ridibooks.com/ridibooks_banner/27756d26-fe99-4f16-80d7-eccf3130651a.jpg" alt="더 골">
+                            <div>
+                                <h3 class="main-swiper__title">&lt;더 골&gt; 전권 50년 대여 세트</h3>
+                                <p class="main-swiper__description">개정판 출간 기념 할인전</p>
+                            </div>                                                    
+                        </a>                        
+                    </div>
+                </div>                
+            </div>    
+            <button class="main-swiper__button-prev swiper-button-prev"></button>
+            <button class="main-swiper__button-next swiper-button-next"></button>                    
+        </div>
 
+        <div class="main-icon-banner">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img alt="리디샵" class="fig-9hliif" src="//active.ridibooks.com/ridibooks_banner/7a93aff9-613f-4ac8-ae01-1db074a75310.png" loading="eager">
+                        </a>
+                        <span>리디샵</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="신간" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/new.d0c590b8b2fe4f364eadecb600491294.png" loading="eager">
+                        </a>
+                        <span>신간</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="북스 베스트" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/bestseller.d954cea8b85b182e7cfbffdb9519bb07.png" loading="eager">
+                        </a>
+                        <span>북스 베스트</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="이벤트" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/event.895183ca4353ae354bca3f5e896cec55.png" loading="eager">
+                        </a>
+                        <span>이벤트</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="리디온리" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/only.7d71bce5c941b4fcb325ffac8ae50410.png" loading="eager">
+                        </a>
+                        <span>리디온리</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="이달의 쿠폰" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/coupon.3934aadf872c47ffcc59586ce12c6c34.png" loading="eager">
+                        </a>
+                        <span>이달의 쿠폰</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="대여" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/rent.f61ca0abf4a6d0d5eb18fc65f3f3902b.png" loading="eager">
+                        </a>
+                        <span>대여</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img alt="혜택 모아봄" class="fig-9hliif" src="https://active.ridibooks.com/quick-menu/light/promotion_map.3199d6755aef129b824783b255e3f1a1.png" loading="eager">
+                        </a>
+                        <span>혜택 모아봄</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
         <footer>
+            <hr class="line">
+            <div class="footer-wrap">                
+                <div class="footer-inner">
+                    <div class="footer-top">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="fig-1v994a0"><path fill="currentColor" fill-rule="evenodd" d="M12 2.07A7.95 7.95 0 0 0 4.25 8.25h-.85A2.75 2.75 0 0 0 .648 11v2a2.75 2.75 0 0 0 2.75 2.75h1.4a.75.75 0 0 0 .75-.75v-.574l.002-.06V10.02a6.45 6.45 0 0 1 12.9 0v4.943a4.91 4.91 0 0 1-3.829 4.788 2.25 2.25 0 1 0-.012 1.53 6.41 6.41 0 0 0 5.293-5.531h.699a2.75 2.75 0 0 0 2.75-2.75v-2a2.75 2.75 0 0 0-2.75-2.75h-.849a7.95 7.95 0 0 0-7.752-6.18M11.25 11a.75.75 0 0 0-1.5 0v.8a.75.75 0 0 0 1.5 0zm2.25-.75a.75.75 0 0 1 .75.75v.8a.75.75 0 0 1-1.5 0V11a.75.75 0 0 1 .75-.75M11.75 20.5a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0M3.398 9.75c-.69 0-1.25.56-1.25 1.25v2c0 .69.56 1.25 1.25 1.25h.65v-4.5zM21.852 11c0-.69-.56-1.25-1.25-1.25h-.65v4.5h.65c.69 0 1.25-.56 1.25-1.25z" clip-rule="evenodd"></path></svg>
+                                    고객센터
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="fig-1v994a0"><path fill="currentColor" fill-rule="evenodd" d="M17.75 4.61a1.75 1.75 0 0 0-2.526-1.568L7.734 6.75H5A1.75 1.75 0 0 0 3.25 8.5v7c0 .966.784 1.75 1.75 1.75h2.734l7.49 3.707a1.75 1.75 0 0 0 2.526-1.568zm-1.86-.223a.25.25 0 0 1 .36.224v14.778a.25.25 0 0 1-.36.224l-7.648-3.785-.157-.078H5a.25.25 0 0 1-.25-.25v-7A.25.25 0 0 1 5 8.25h3.085l.157-.078zm5.46 5.914a.75.75 0 0 0-1.5 0v3.4a.75.75 0 0 0 1.5 0z" clip-rule="evenodd"></path></svg>
+                                    공지사항
+                                </a>
+                            </li>
+                        </ul>
+                        <div>
+                            <p>서비스</p>
+                            <ul>
+                                <li>
+                                    <a href="#">제휴카드</a>
+                                </li>
+                                <li>
+                                    <a href="#">뷰어 다운로드</a>
+                                </li>
+                                <li>
+                                    <a href="#">CP사이트</a>
+                                </li>
+                                <li>
+                                    <a href="#">리디바탕</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <p>기타 문의</p>
+                            <ul>
+                                <li>
+                                    <a href="#">원고 투고</a>
+                                </li>
+                                <li>
+                                    <a href="#">사업 제휴 문의</a>
+                                </li>                            
+                            </ul>
+                        </div>
 
+                        <div>
+                            <p>회사</p>
+                            <ul>
+                                <li>
+                                    <a href="#">회사 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">인재 채용</a>
+                                </li>                            
+                            </ul>
+                        </div>
+                    </div>   
+                    
+                    <div class="footer-company">
+                        <button type="button">
+                            리디(주) 사업자 정보
+                            <span>
+                                <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-4dsd3s"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path></svg>
+                            </span>
+                        </button>
+                        <div>
+                            <ul>
+                                <li><span>대표자 배기식</span></li>
+                                <li><span>사업자 등록번호 120-87-27435</span></li>
+                                <li><span>통신판매업 신고번호 2009-서울강남-02139</span></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <span>이메일</span>
+                                    <a href="#">help@ridi.com</a>
+                                </li>
+                                <li>
+                                    <span>대표전화</span>
+                                    <a href="#">1644-0331</a>
+                                </li>
+                                <li>
+                                    <span>주소 서울특별시 강남구 테헤란로 325, 어반벤치빌딩 4,10,11층 (역삼동)</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">이용약관</a>
+                                </li>
+                                <li>
+                                    <a href="#">개인정보 처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="#">청소년</a>
+                                </li>
+                                <li>
+                                    <a href="#">이용약관</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-sns">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="m14.61 13.253.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A9 9 0 0 0 13.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647z"></path></svg>
+                                <span class="sr-only">페이스북</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.687 6.3H9.314A3.013 3.013 0 0 0 6.3 9.313v5.373A3.013 3.013 0 0 0 9.314 17.7h5.373a3.013 3.013 0 0 0 3.013-3.012V9.313A3.01 3.01 0 0 0 14.687 6.3m0-1.3H9.314A4.314 4.314 0 0 0 5 9.313v5.373A4.313 4.313 0 0 0 9.314 19h5.373A4.31 4.31 0 0 0 19 14.688V9.313A4.31 4.31 0 0 0 14.687 5m1.871 3.28a.937.937 0 1 1-1.874-.002.937.937 0 0 1 1.874.001M14.2 12a2.2 2.2 0 1 1-4.4 0 2.2 2.2 0 0 1 4.4 0m1.3 0a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" clip-rule="evenodd"></path></svg>
+                                <span class="sr-only">인스타그램</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#787878" d="m5.776 5.5 4.83 6.43-4.856 5.237h1.092l4.254-4.583 3.433 4.583h3.721l-5.101-6.796L17.674 5.5h-1.092l-3.923 4.217L9.497 5.5zm1.607.802h1.713l7.547 10.063H14.93z"></path></svg>
+                                <span class="sr-only">트위터</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M10.521 16.57A1 1 0 0 1 9 15.717V8.283a1 1 0 0 1 1.521-.853l6.083 3.717a1 1 0 0 1 0 1.706z"></path></svg>
+                                <span class="sr-only">유튜브</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#787878" d="M12.372 5h2.41s1.113 2.656 3.718 2.911l-.46 2.35s-1.838-.052-3.268-1.533v5.822s0 1.226-.664 2.247c0 0-1.073 1.941-3.473 2.145 0 0-1.736.205-3.268-.919 0 0-1.635-1.021-1.839-3.268 0 0-.357-2.094 1.481-3.83 0 0 1.226-1.43 3.984-1.226v2.4h-.767s-1.532-.102-2.144 1.43c0 0-.562 1.48.663 2.502 0 0 .92.817 2.146.409 0 0 1.174-.307 1.43-1.634 0 0 .05-.154.05-.766z"></path></svg>
+                                <span class="sr-only">틱톡</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
         </footer>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const input = document.querySelector('.header-search input');
+        const clearBtn = document.querySelector('.search-clear');
+
+        input.addEventListener('input', () => {
+            clearBtn.style.display = input.value ? 'flex' : 'none';
+        });
+
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            input.focus();
+            clearBtn.style.display = 'none';
+        });
+         
+        const swiper = new Swiper('.main-swiper__container', {
+            slidesPerView: 3,
+            spaceBetween: 8,
+            navigation: {
+                nextEl: '.main-swiper__button-next',
+                prevEl: '.main-swiper__button-prev',
+            },
+            pagination: {
+                el: '.main-swiper__pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
