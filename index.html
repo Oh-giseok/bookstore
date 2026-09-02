@@ -222,6 +222,18 @@
                 </ul>
             </div>
         </div>
+            
+        <div id="section-1" class="section-1">
+            <h2>방금 본 작품과 비슷한</h2>            
+            <div class="__container swiper">                
+                <div class="__wrapper swiper-wrapper">
+                    
+                </div>
+                                
+                <button type="button" class="swiper-button-prev"></button>
+                <button type="button" class="swiper-button-next"></button>
+            </div>
+        </div>
         
         <footer>
             <hr class="line">
@@ -286,46 +298,37 @@
                     </div>   
                     
                     <div class="footer-company">
-                        <button type="button">
-                            리디(주) 사업자 정보
-                            <span>
-                                <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-4dsd3s"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path></svg>
-                            </span>
+                        <button type="button" class="info-toggle-btn" aria-expanded="true">
+                        리디(주) 사업자 정보
+                        <span class="icon-arrow" aria-hidden="true">
+                            <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"/>
+                            </svg>
+                        </span>
                         </button>
-                        <div>
-                            <ul>
-                                <li><span>대표자 배기식</span></li>
-                                <li><span>사업자 등록번호 120-87-27435</span></li>
-                                <li><span>통신판매업 신고번호 2009-서울강남-02139</span></li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <span>이메일</span>
-                                    <a href="#">help@ridi.com</a>
-                                </li>
-                                <li>
-                                    <span>대표전화</span>
-                                    <a href="#">1644-0331</a>
-                                </li>
-                                <li>
-                                    <span>주소 서울특별시 강남구 테헤란로 325, 어반벤치빌딩 4,10,11층 (역삼동)</span>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="#">이용약관</a>
-                                </li>
-                                <li>
-                                    <a href="#">개인정보 처리방침</a>
-                                </li>
-                                <li>
-                                    <a href="#">청소년</a>
-                                </li>
-                                <li>
-                                    <a href="#">이용약관</a>
-                                </li>
-                            </ul>
+
+                        <div class="info-content">
+                        <ul class="info-list">
+                            <li>대표자 배기식</li>
+                            <li>사업자 등록번호 120-87-27435</li>
+                            <li>통신판매업 신고번호 2009-서울강남-02139</li>
+                        </ul>
+
+                        <ul class="info-list">
+                            <li>이메일 <a href="mailto:help@ridi.com">help@ridi.com</a></li>
+                            <li>대표전화 <a href="tel:1644-0331">1644-0331</a></li>
+                            <li>주소 서울특별시 강남구 테헤란로 325, 어반벤치빌딩 4,10,11층 (역삼동)</li>
+                        </ul>
+
+                        <ul class="info-links">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#" class="privacy-link">개인정보 처리방침</a></li>
+                            <li><a href="#">청소년보호정책</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">사업자정보확인</a></li>
+                        </ul>
                         </div>
+
+                        <p class="copyright">&copy; RIDI Corp.</p>
                     </div>
                 </div>
 
@@ -365,36 +368,10 @@
                 </div>
             </div>            
         </footer>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const input = document.querySelector('.header-search input');
-        const clearBtn = document.querySelector('.search-clear');
-
-        input.addEventListener('input', () => {
-            clearBtn.style.display = input.value ? 'flex' : 'none';
-        });
-
-        clearBtn.addEventListener('click', () => {
-            input.value = '';
-            input.focus();
-            clearBtn.style.display = 'none';
-        });
-         
-        const swiper = new Swiper('.main-swiper__container', {
-            slidesPerView: 3,
-            spaceBetween: 8,
-            navigation: {
-                nextEl: '.main-swiper__button-next',
-                prevEl: '.main-swiper__button-prev',
-            },
-            pagination: {
-                el: '.main-swiper__pagination',
-                clickable: true,
-            },
-        });
-    </script>
+    </div>    
 </body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/books.js"></script>
+<script src="js/main.js"></script>    
 </html>
