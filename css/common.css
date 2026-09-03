@@ -229,15 +229,26 @@ footer {
 }
 
 [class^="section-"] {
+    position: relative;
     max-width: 1170px;
     padding-left: 30px;
     padding-right: 30px;
     margin: 40px auto 0px;
 }
 
-[class^="section-"] h2{
+[class^="section-"]:nth-child(even of [class^="section-"]) {
+    padding-bottom: 30px;
+}
+
+[class^="section-"] .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 4px;
-    padding-bottom: 16px;
+    padding-bottom: 16px;    
+}
+
+[class^="section-"] .heading > h2{
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -250,4 +261,56 @@ footer {
     overflow-wrap: break-word;
     white-space: nowrap;
     line-height: 26px;
+}
+
+[class^="section-"] .heading a{
+    color: rgb(165, 165, 165);
+    letter-spacing: -0.01em;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    padding: 6px 0px 0px;
+}
+
+[class^="section-"] .product-item .book-info{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+[class^="section-"] .product-item .book-title{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;    
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    white-space: normal;
+    line-height: 18px;
+    color: rgb(20, 20, 20);    
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+[class^="section-"] .product-item .book-author{
+    margin-top: 6px;
+    height: 17px;
+    letter-spacing: -0.14px;
+    line-height: 17px;
+    font-size: 14px;
+    color: rgb(120, 120, 120);        
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    width: 100%;    
+    display: inline-block !important;
+}
+
+[class^="section-"] .product-item-horizontal{
+    display: flex;
 }

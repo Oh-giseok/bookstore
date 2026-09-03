@@ -23,3 +23,14 @@ const swiper = new Swiper('.main-swiper__container', {
         clickable: true,
     },
 });
+
+const swiper2 = new Swiper('.section-5 .__container', {
+    slidesPerView: 3,
+    spaceBetween: 6,
+    observer: true,
+    observeParents: true,
+    navigation: {
+        nextEl: '.section-5 .swiper-button-next',
+        prevEl: '.section-5 .swiper-button-prev',
+    }
+});
