@@ -252,7 +252,7 @@
 }
 
 /* 2. 섹션별 Swiper 이전/다음 버튼 공통 스타일 */
-:where(.main-swiper, .section-1, .section-2, .section-4, .section-5) :where([class*="swiper-button-"]) {
+:where(.main-swiper, .section-1, .section-2, .section-4, .section-5, .section-6, .section-7, .section-8) :where([class*="swiper-button-"]) {
     position: absolute;
     top: 50%;
     width: 40px !important;
@@ -467,6 +467,30 @@
     margin-left: auto;
 }
 
+.section-5 .swiper-wrapper .swiper-slide:nth-child(1) .box-background{
+    background-color: rgb(14, 100, 52);
+}
+
+.section-5 .swiper-wrapper .swiper-slide:nth-child(2) .box-background{
+    background-color: rgb(116, 92, 20);
+}
+
+.section-5 .swiper-wrapper .swiper-slide:nth-child(3) .box-background{
+    background-color: rgb(123, 4, 60);
+}
+
+.section-5 .swiper-wrapper .swiper-slide:nth-child(4) .box-background{
+    background-color: rgb(139, 182, 60);
+}
+
+.section-5 .swiper-wrapper .swiper-slide:nth-child(5) .box-background{
+    background-color: rgb(39, 53, 99);
+}
+
+.section-5 .swiper-wrapper .swiper-slide:nth-child(6) .box-background{
+    background-color: rgb(21, 136, 67);
+}
+
 .section-5 .box{
     position: relative;
     height: 140px;
@@ -499,4 +523,112 @@
     transform: translate(-50%, 0px);
     background-color: rgb(123, 4, 60);
     z-index: 0;
+}
+
+.section-5 .box-title{
+    text-align: center;
+}
+
+.section-5 .box-title p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-height: 1.5rem;
+    white-space: pre-line;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(20, 20, 20);
+}
+
+.section-5 .box-title span{
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(120, 120, 120);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    line-height: 16px;
+}
+
+.section-7 .container ul{
+    display: flex;
+    gap: 6px;
+}
+
+.section-7 .container ul li{
+    position: relative;
+    width: 20%;
+}
+
+.section-7 .container ul li a{
+    position: relative;
+    display: block;
+    width: 217px;
+    height: 434px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.04);
+    background-size: cover;
+    overflow: hidden;    
+}
+
+.section-7 .container ul li:nth-child(1) a{
+    background-image: url("//active.ridibooks.com/ridibooks_banner/b8d5ce6b-8c0b-4cd9-abec-0a19398439eb.png");
+}
+
+.section-7 .container ul li:nth-child(2) a{
+    background-image: url("//active.ridibooks.com/ridibooks_banner/75b02236-fc82-4b1d-85de-3a3d56af191b.png");
+}
+
+.section-7 .container ul li:nth-child(3) a{
+    background-image: url("//active.ridibooks.com/ridibooks_banner/c32b3569-8655-4429-994d-2674598ef1e2.png");
+}
+
+.section-7 .container ul li:nth-child(4) a{
+    background-image: url("//active.ridibooks.com/ridibooks_banner/f5c24bc4-ca52-42f2-8ca0-0b15b5b62abe.png");
+}
+
+.section-7 .container ul li:nth-child(5) a{
+    background-image: url("//active.ridibooks.com/ridibooks_banner/af16453d-2c86-4647-a9a8-d0c98943c362.jpg");
+}
+
+.section-7 .container ul li:nth-child(1) a .cover{
+    background-image: linear-gradient(to top, rgb(95, 189, 105), rgba(95, 189, 105, 0)), linear-gradient(to top, rgb(95, 189, 105), rgba(95, 189, 105, 0));
+}
+
+.section-7 .container ul li:nth-child(2) a .cover{
+    background-image: linear-gradient(to top, rgb(14, 207, 209), rgba(14, 207, 209, 0)), linear-gradient(to top, rgb(14, 207, 209), rgba(14, 207, 209, 0));
+}
+
+.section-7 .container ul li:nth-child(4) a .cover{
+    background-image: linear-gradient(to top, rgb(69, 53, 68), rgba(69, 53, 68, 0)), linear-gradient(to top, rgb(69, 53, 68), rgba(69, 53, 68, 0));
+}
+
+.section-7 .container ul li a .cover{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.section-7 .container ul li a > img{
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%);
+    max-width: 180px;
+    height: 126px;
+    object-fit: contain;    
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/detail.css">   
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    
+</head>
+<body>
+    <!-- 헤더 -->
+    <div class="header-container"></div>
+    <hr class="line">
+
+    <div class="detail-container">
+        <div class="book-detail-wrapper">            
+            <!-- 좌측 표지 이미지 영역 -->
+            <div class="detail-thumb-box">
+                <a href="#">
+                    <div class="box-background detail-bg"></div>
+                    <img class="detail-img" src="" alt="책 표지">
+                </a>                
+            </div>            
+
+            <!-- 우측 책 상세정보 영역 -->
+            <div>
+                <h1 class="detail-title"></h1>
+                <div class="detail-info-box">
+                    <div class="grade">
+                        <div>
+                            <button>
+                                <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="별점" class="rigrid-18z3lm8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0L7.31151 3.30313L11 4.025L8.44643 6.75938L8.90476 10.5L5.5 8.90312L2.09524 10.5L2.55357 6.75938L0 4.00313L3.68849 3.30313L5.5 0Z" fill="currentColor"></path></svg>
+                                <span>4.2점<span>(15)</span></span>
+                            </button>
+                            <span>관심 1</span>
+                        </div>
+                    </div>                        
+                    <div>
+                        <a href="#">
+                            <span class="detail-author"></span>
+                        </a>        
+                        저자
+                    </div>                          
+                    <div>
+                        <a href="#">
+                            <span class="detail-publisher"></span>
+                        </a>
+                        출판
+                    </div>                
+                </div>                      
+
+                <div>
+                    <div>
+                        <div>소장</div>
+                        <div>
+                            <ul>
+                                <li>종이책 정가<span class="detail-price"></span>원</li>
+                                <li>전자책 할인가<strong class="detail-sale-price"></strong>원</li>
+                            </ul>
+                        </div>                                        
+                    </div>                
+                </div>                
+                            
+                <!-- <div class="detail-contents-box">
+                    <h3>작품 소개</h3>
+                    <p class="detail-contents"></p>
+                </div> -->                            
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 상세페이지 스크립트 연결 -->
+    <script src="js/detail.js"></script>
+</body>
+</html>

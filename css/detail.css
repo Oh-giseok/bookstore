@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.detail-container{
+    position: relative;
+    max-width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.book-detail-wrapper{    
+    margin-top: 30px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.detail-thumb-box{
+    position: relative;
+    min-width: 204px;
+    width: 204px;
+    max-width: 100%;
+}
+
+.detail-thumb-box > a{
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.detail-thumb-box > a > img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.detail-title{
+    line-height: 38px;
+    margin-bottom: 12px;
+}
+
+.detail-title > div{
+    color: #141414;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    margin: 12px 0;
+}
+
+.detail-info-box{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #555555;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detail-info-box .grade button{
+    display: flex;
+    align-items: center;
+    appearance: none;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 14px;    
+    font-weight: 700;
+}
+
+.detail-info-box .grade div button svg{
+    margin-right: 2px;
+}
+
+.detail-info-box .grade > div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.detail-info-box .grade > div > span{
+    color: #555;
+    margin-left: 4px;
+}
+
+.detail-info-box .grade div button svg path, .detail-info-box .grade > div > div{
+    display: flex;
+    align-items: center;
+}
+
+.detail-info-box .grade div button svg path, .detail-info-box .grade > div button span{
+    color: #DC3232;
+}
+
+.detail-info-box .grade > div button span > span{
+    color: #555;
+}
+
+.detail-info-box > div .detail-author, .detail-info-box > div .detail-publisher{
+    color: #555;
+    font-weight: 600;
+}
