@@ -111,7 +111,7 @@
 }
 
 .header-bottom nav ul li{    
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -151,20 +151,20 @@
     line-height: 24px;
 }
 
-.tab-menu{
+.main-header .tab-menu{
     width: 1170px;    
     max-width: 1170px;    
     margin: 0 auto;    
 }
 
-.tab-menu ul{
+.main-header .tab-menu ul{
     display: flex;    
     padding: 13px 30px;
     overflow-x: auto;
     white-space: nowrap;
 }
 
-.tab-menu ul li a{
+.main-header .tab-menu ul li a{
     display: inline-block;
     padding: 7px 10px 8px;
     border-radius: 99px;
@@ -177,7 +177,7 @@
     transition: all 0.2s ease-in-out
 }
 
-.tab-menu ul li a.on{
+.main-header .tab-menu ul li a.on{
     background: #1E9EFF;
     color: #ffffff;
     cursor: default;
@@ -200,6 +200,7 @@
 .main-swiper .swiper-slide{
     width: 364px;
     height: 414px;
+    margin-right: 8px;
 }
 
 .main-swiper .swiper-slide .main-swiper__thumbnail{
@@ -252,7 +253,7 @@
 }
 
 /* 2. 섹션별 Swiper 이전/다음 버튼 공통 스타일 */
-:where(.main-swiper, .section-1, .section-2, .section-4, .section-5, .section-6, .section-7, .section-8) :where([class*="swiper-button-"]) {
+:where(.main-swiper, .section-1, .section-2, .section-4, .section-5, .section-6, .section-7, .section-8, .section-9, .swiper-section) :where([class*="swiper-button-"]) {
     position: absolute;
     top: 50%;
     width: 40px !important;
@@ -561,17 +562,17 @@
     line-height: 16px;
 }
 
-.section-7 .container ul{
+.section-8 .container ul{
     display: flex;
     gap: 6px;
 }
 
-.section-7 .container ul li{
+.section-8 .container ul li{
     position: relative;
     width: 20%;
 }
 
-.section-7 .container ul li a{
+.section-8 .container ul li a{
     position: relative;
     display: block;
     width: 217px;
@@ -582,39 +583,39 @@
     overflow: hidden;    
 }
 
-.section-7 .container ul li:nth-child(1) a{
+.section-8 .container ul li:nth-child(1) a{
     background-image: url("//active.ridibooks.com/ridibooks_banner/b8d5ce6b-8c0b-4cd9-abec-0a19398439eb.png");
 }
 
-.section-7 .container ul li:nth-child(2) a{
+.section-8 .container ul li:nth-child(2) a{
     background-image: url("//active.ridibooks.com/ridibooks_banner/75b02236-fc82-4b1d-85de-3a3d56af191b.png");
 }
 
-.section-7 .container ul li:nth-child(3) a{
+.section-8 .container ul li:nth-child(3) a{
     background-image: url("//active.ridibooks.com/ridibooks_banner/c32b3569-8655-4429-994d-2674598ef1e2.png");
 }
 
-.section-7 .container ul li:nth-child(4) a{
+.section-8 .container ul li:nth-child(4) a{
     background-image: url("//active.ridibooks.com/ridibooks_banner/f5c24bc4-ca52-42f2-8ca0-0b15b5b62abe.png");
 }
 
-.section-7 .container ul li:nth-child(5) a{
+.section-8 .container ul li:nth-child(5) a{
     background-image: url("//active.ridibooks.com/ridibooks_banner/af16453d-2c86-4647-a9a8-d0c98943c362.jpg");
 }
 
-.section-7 .container ul li:nth-child(1) a .cover{
+.section-8 .container ul li:nth-child(1) a .cover{
     background-image: linear-gradient(to top, rgb(95, 189, 105), rgba(95, 189, 105, 0)), linear-gradient(to top, rgb(95, 189, 105), rgba(95, 189, 105, 0));
 }
 
-.section-7 .container ul li:nth-child(2) a .cover{
+.section-8 .container ul li:nth-child(2) a .cover{
     background-image: linear-gradient(to top, rgb(14, 207, 209), rgba(14, 207, 209, 0)), linear-gradient(to top, rgb(14, 207, 209), rgba(14, 207, 209, 0));
 }
 
-.section-7 .container ul li:nth-child(4) a .cover{
+.section-8 .container ul li:nth-child(4) a .cover{
     background-image: linear-gradient(to top, rgb(69, 53, 68), rgba(69, 53, 68, 0)), linear-gradient(to top, rgb(69, 53, 68), rgba(69, 53, 68, 0));
 }
 
-.section-7 .container ul li a .cover{
+.section-8 .container ul li a .cover{
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -623,7 +624,7 @@
     padding-bottom: 100%;
 }
 
-.section-7 .container ul li a > img{
+.section-8 .container ul li a > img{
     position: absolute;
     left: 50%;
     bottom: 28px;
@@ -631,4 +632,25 @@
     max-width: 180px;
     height: 126px;
     object-fit: contain;    
+}
+
+/* 메인 페이지 상품 정보 레이아웃 */
+.book-info {
+    margin-top: 8px;
+    text-align: left;
+}
+
+.book-info .book-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 제목이 길 경우 한 줄로 생략 */
+}
+
+.book-info .book-author {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px;
 }

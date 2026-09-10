@@ -318,3 +318,21 @@ footer {
 [class^="section-"] .product-item-horizontal{
     display: flex;
 }
+
+/* 평점 및 리뷰 수 스타일 */
+.book-info .book-rating {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #dc3232;
+}
+
+.book-info .book-rating .star {
+    margin-right: 2px;
+    color: #dc3232;
+}
+
+.book-info .book-rating .review-count {
+    color: #999;
+    font-weight: 400;
+}

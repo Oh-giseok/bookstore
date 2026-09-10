@@ -16,64 +16,355 @@
     <hr class="line">
 
     <div class="detail-container">
-        <div class="book-detail-wrapper">            
-            <!-- 좌측 표지 이미지 영역 -->
-            <div class="detail-thumb-box">
-                <a href="#">
-                    <div class="box-background detail-bg"></div>
-                    <img class="detail-img" src="" alt="책 표지">
-                </a>                
-            </div>            
+        <div class="wrap">
+            <div class="book-detail-wrapper">            
+                <!-- 좌측 표지 이미지 영역 -->
+                <div class="detail-thumb-box">
+                    <a href="#">
+                        <div class="box-background detail-bg"></div>
+                        <img class="detail-img" src="" alt="책 표지">
+                    </a>  
+                    <div>
+                        <a href="#">미리보기</a>
+                    </div>              
+                </div>            
 
-            <!-- 우측 책 상세정보 영역 -->
-            <div>
-                <h1 class="detail-title"></h1>
-                <div class="detail-info-box">
-                    <div class="grade">
-                        <div>
-                            <button>
-                                <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="별점" class="rigrid-18z3lm8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0L7.31151 3.30313L11 4.025L8.44643 6.75938L8.90476 10.5L5.5 8.90312L2.09524 10.5L2.55357 6.75938L0 4.00313L3.68849 3.30313L5.5 0Z" fill="currentColor"></path></svg>
-                                <span>4.2점<span>(15)</span></span>
-                            </button>
-                            <span>관심 1</span>
-                        </div>
-                    </div>                        
-                    <div>
-                        <a href="#">
-                            <span class="detail-author"></span>
-                        </a>        
-                        저자
-                    </div>                          
-                    <div>
-                        <a href="#">
-                            <span class="detail-publisher"></span>
-                        </a>
-                        출판
-                    </div>                
-                </div>                      
-
-                <div>
-                    <div>
-                        <div>소장</div>
-                        <div>
+                <!-- 우측 책 상세정보 영역 -->
+                <div class="detail-book-info"> 
+                    <h1 class="detail-title"></h1>
+                    <div class="detail-info-box">
+                        <div class="grade">
+                            <div>
+                                <button>
+                                    <svg width="1em" height="1em" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="별점" class="rigrid-18z3lm8"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 0L7.31151 3.30313L11 4.025L8.44643 6.75938L8.90476 10.5L5.5 8.90312L2.09524 10.5L2.55357 6.75938L0 4.00313L3.68849 3.30313L5.5 0Z" fill="currentColor"></path></svg>
+                                    <span>4.2점<span>(15)</span></span>
+                                </button>
+                                <span>관심 1</span>
+                            </div>
+                        </div>       
+                        <div class="info-container">
                             <ul>
-                                <li>종이책 정가<span class="detail-price"></span>원</li>
-                                <li>전자책 할인가<strong class="detail-sale-price"></strong>원</li>
+                                <li>
+                                    <a href="#">
+                                        <span class="detail-author"></span>
+                                    </a>
+                                    저자
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="detail-publisher"></span>
+                                    </a>
+                                    출판
+                                </li>
                             </ul>
-                        </div>                                        
-                    </div>                
-                </div>                
-                            
-                <!-- <div class="detail-contents-box">
-                    <h3>작품 소개</h3>
-                    <p class="detail-contents"></p>
-                </div> -->                            
+                        </div>                 
+                                        
+                        <div class="like-btn">
+                            <button type="button">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="rigrid-nnj3q7"><g clip-path="url(#clip0_9031_1622)"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.50039 1.61963C6.83176 1.61963 7.10039 1.88826 7.10039 2.21963V10.7911C7.10039 11.1224 6.83176 11.3911 6.50039 11.3911C6.16902 11.3911 5.90039 11.1224 5.90039 10.7911V2.21963C5.90039 1.88826 6.16902 1.61963 6.50039 1.61963Z" fill="#1E9EFF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3852 6.4999C11.3852 6.83128 11.1166 7.0999 10.7852 7.0999H2.21377C1.8824 7.0999 1.61377 6.83127 1.61377 6.4999C1.61377 6.16853 1.8824 5.8999 2.21377 5.8999H10.7852C11.1166 5.8999 11.3852 6.16853 11.3852 6.4999Z" fill="#1E9EFF"></path></g><defs><clipPath id="clip0_9031_1622"><rect width="10" height="10" fill="white" transform="translate(1.5 1.5)"></rect></clipPath></defs></svg>
+                                관심
+                            </button>
+                        </div>
+
+                        <div class="select-container">
+                            <div class="wrap">
+                                <div>셀렉트</div>
+                                <a href="#">
+                                    리디셀렉트에서 바로 볼 수 있는 책입니다!
+                                    <span class="rigrid-1e94iwo"><svg width="1em" height="1em" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="셀렉트 가기" class="rigrid-111o5ku"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.99734 12.5106C3.72398 12.2372 3.72398 11.794 3.99734 11.5206L8.51903 6.99891L3.99734 2.47722C3.72398 2.20385 3.72398 1.76064 3.99734 1.48727C4.27071 1.2139 4.71393 1.2139 4.98729 1.48727L10.004 6.50393C10.2773 6.7773 10.2773 7.22052 10.004 7.49388L4.98729 12.5106C4.71393 12.7839 4.27071 12.7839 3.99734 12.5106Z" fill="currentColor"></path></svg></span>
+                                </a>             
+                            </div>                                   
+                        </div>
+
+                        <div class="price-container">
+                            <div class="wrap">
+                                <p>소장</p>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            종이책 정가<span class="detail-price"></span>
+                                        </li>
+                                        <li>
+                                            할인가                                        
+                                            <span class="detail-sale-price"><strong></strong></span>
+                                        </li>
+                                    </ul>
+                                </div>                                        
+                            </div>                
+                        </div>  
+
+                        <div class="icon-container">
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <button type="button">
+                                            <span>
+                                                <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rigrid-bf8dw"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.0687 4.42784C11.0684 4.42761 11.0689 4.42806 11.0687 4.42784L11.9956 5.40048L12.8362 4.50935L12.8375 4.50792C14.9619 2.2668 18.5383 2.17416 20.7785 4.29768C23.0198 6.42229 23.1126 9.99986 20.9772 12.2402L12.6512 21.0066L12.6438 21.014C12.2814 21.3764 11.6949 21.3764 11.3324 21.014L11.3251 21.0066L2.99868 12.2399C2.99865 12.2398 2.9987 12.2399 2.99868 12.2399C0.917342 10.0532 0.977632 6.52742 3.10245 4.4026L3.19396 4.31109C5.39201 2.12473 8.92915 2.17215 11.0687 4.42784ZM4.32306 5.44473C5.88484 3.89206 8.3873 3.92534 9.90761 5.52873L9.90901 5.5302L11.3356 7.02717L11.3425 7.03397C11.7049 7.39639 12.2914 7.39639 12.6538 7.03397L12.6621 7.02571L13.9987 5.60865C13.9985 5.60886 13.9989 5.60844 13.9987 5.60865C15.5144 4.01038 18.0782 3.94261 19.6778 5.45889C21.2764 6.97427 21.3437 9.53671 19.819 11.1363L11.9881 19.3811L5.92835 12.9975L4.15767 11.1368C2.67908 9.58344 2.71866 7.04912 4.23382 5.53397L4.32231 5.44548C4.32256 5.44523 4.32281 5.44498 4.32306 5.44473Z" fill="currentColor"></path></svg>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rigrid-bf8dw"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.199219 2.99922C0.199219 2.55739 0.557392 2.19922 0.999224 2.19922H3.83705C4.2008 2.19922 4.51877 2.44462 4.61094 2.7965L5.34885 5.61345C5.41003 5.59847 5.47396 5.59053 5.53976 5.59053H21.9992C22.259 5.59053 22.5026 5.7167 22.6526 5.92889C22.8025 6.14109 22.84 6.41288 22.7532 6.65777L19.3478 16.2665C19.2347 16.5858 18.9326 16.7992 18.5938 16.7992H7.24246C6.87871 16.7992 6.56075 16.5538 6.46857 16.2019L3.21962 3.79922H0.999224C0.557392 3.79922 0.199219 3.44105 0.199219 2.99922ZM5.76198 7.19053L7.85989 15.1992H18.0286L20.8669 7.19053H5.76198ZM8.99902 20.4992C8.99902 21.3276 8.32745 21.9992 7.49902 21.9992C6.67059 21.9992 5.99902 21.3276 5.99902 20.4992C5.99902 19.6708 6.67059 18.9992 7.49902 18.9992C8.32745 18.9992 8.99902 19.6708 8.99902 20.4992ZM18.499 21.9992C19.3274 21.9992 19.999 21.3276 19.999 20.4992C19.999 19.6708 19.3274 18.9992 18.499 18.9992C17.6706 18.9992 16.999 19.6708 16.999 20.4992C16.999 21.3276 17.6706 21.9992 18.499 21.9992Z" fill="currentColor"></path></svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button">
+                                            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rigrid-bf8dw"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.65717 1.96967C8.95006 1.67678 9.42493 1.67678 9.71783 1.96967L11.7442 3.99609H12.2556L14.282 1.96967C14.5749 1.67678 15.0498 1.67678 15.3426 1.96967C15.6355 2.26256 15.6355 2.73744 15.3426 3.03033L14.3769 3.99609H20.4995C21.1898 3.99609 21.7495 4.55574 21.7495 5.24609V19.9956C21.7495 20.686 21.1898 21.2456 20.4995 21.2456H3.5C2.80964 21.2456 2.25 20.686 2.25 19.9956V5.24609C2.25 4.55574 2.80964 3.99609 3.5 3.99609H9.62293L8.65717 3.03033C8.36427 2.73744 8.36427 2.26256 8.65717 1.96967ZM11.1229 5.49609H3.75V19.7456H11.2495V5.62267L11.1229 5.49609ZM12.7495 19.7456H20.2495V5.49609H12.8769L12.7495 5.62349V19.7456Z" fill="currentColor"></path></svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <a href="#">소장</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>                                                              
+                                
+                    <!-- <div class="detail-contents-box">
+                        <h3>작품 소개</h3>
+                        <p class="detail-contents"></p>
+                    </div> -->                            
+                </div>
+
             </div>
 
+            <div class="book-info-card">            
+                <dl class="info-group">
+                    <div class="info-row">
+                    <dt>출간 정보</dt>
+                    <dd>
+                        <p>2024.09.01 전자책 출간</p>
+                        <p>2024.04.17 종이책 출간</p>
+                    </dd>
+                    </div>
+
+                    <div class="info-row">
+                    <dt>파일 정보</dt>
+                    <dd>
+                        <span>EPUB</span>
+                        <span class="divider">|</span>
+                        <span>약 18.3만 자</span>
+                        <span class="divider">|</span>
+                        <span>9.9MB</span>
+                    </dd>
+                    </div>
+
+                    <div class="info-row">
+                        <dt>ISBN</dt>
+                        <dd>9791167184696</dd>
+                    </div>
+
+                    <div class="info-row">
+                        <dt>UCI</dt>
+                        <dd>-</dd>
+                    </div>
+                </dl>
+                
+                <dl class="info-group">
+                    <div class="info-row">
+                        <dt>듣기 기능</dt>
+                        <dd>
+                            <span class="icon">🎧</span>
+                            <span>TTS(듣기) 지원</span>
+                        </dd>
+                        </div>
+
+                        <div class="info-row">
+                        <dt>지원 환경</dt>
+                        <dd class="environment-list">
+                            <span><i class="icon">📱</i> 앱</span>
+                            <span class="divider">|</span>
+                            <span class="disabled"><i class="icon">🌐</i> 웹</span>
+                            <span class="divider">|</span>
+                            <span><i class="icon">💻</i> PC뷰어</span>
+                            <span class="divider">|</span>
+                            <span><i class="icon">📱</i> PAPER</span>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="book-detail">
+                <div class="heading">
+                    <h1 class="detail-title"></h1>
+                    <p>작품 정보</p>
+                </div>
+                
+                <div class="tab-menu">
+                    <ul>
+                        <li>
+                            <a href="#">작품 소개</a>
+                        </li>
+                        <li>
+                            <a href="#">목차</a>
+                        </li>
+                        <li>
+                            <a href="#">출판서 서평</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel active">
+                        <p class="detail-contents">
+                            <!-- 자바스크립트에 의해 book.contents 내용이 자동으로 채워집니다. -->
+                        </p>
+                    </div>
+                    <div class="tab-panel">
+                        <div>- 마이스터 호라가 여는 서문
+                            <br>- 프롤로그
+                            <br>- 제1장
+                            <br>- 제2장
+                            <br>- 제3장
+                            <br>- 제4장
+                            <br>- 제5장
+                            <br>- 제6장
+                            <br>- 마이스터 호라의 독자에 대한 도전
+                            <br>- 제7장
+                            <br>- 에필로그
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div>《류젠 가의 일족》 3부작 중 1탄
+                            <br>현지에서 가장 주목받고 있는 작가의 강렬한 데뷔작!
+                            <br>
+                            <br>평생 가문의 저주라는 족쇄에 묶여 스트레스를 받으며 살아온 ‘레나’.
+                            <br>‘가모’를 만나고 서로 사랑에 빠지며 행복한 미래를 꿈꿨다.
+                            <br>그러나 뱃속의 아이를 불의의 사고로 잃고 레나는 좌절하게 된다.
+                            <br>
+                            <br>역시 저주에서 벗어날 수 없다며 나날이 시들어가던 그녀는 결국 병을 얻게 된다.
+                            <br>얼마 남지 않았다는 말에 좌절하고 있던 가모에게 갑자기 전화가 걸려온다.
+                            <br>
+                            <br>가문의 일은 물론 둘 사이의 아이에 대해서도 알고 있는 정체불명의 목소리에 가모는 분노하고 핸드폰을 집어 던진다.
+                            <br>그렇지만 목소리를 계속 들려오고 자동차 밑을 보니 신비로운 모래시계를 발견한다.
+                            <br>가문의 저주를 풀어야 아내의 병을 치료할 수 있을 것이라는 말에 그는 목소리의 지시를 따른다.
+                            <br>
+                            <br>그런데 눈을 떠보니 가모가 있는 곳은 낯선 장소였다.
+                            <br>가문의 저주가 시작된 1960년 시노의 별장 앞에 서있었다.
+                            <br>
+                            <br>작가는 처음부터 독자에게 도전장을 내민다. 이렇게까지 단서를 줘도 절대 범인을 맞출 수 없을 것이라는 자신만만함이 느껴진다. 그렇지만 독자를 속여 정보를 주지 않거나 숨기지 않는다. 그렇기 때문에 마지막까지 읽었을 때 작가의 치밀함에 놀라게 될 것이다. 아무도 믿을 수 없게 만드는 작가의 필력, 직접 겪어보길 바란다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-books">
+                <div class="swiper-section">
+                    <div class="heading">                        
+                        <p>같은 작가의 다른 작품</p>
+                    </div>                    
+                    <div class="swiper author-bottom-swiper">
+                        <div class="swiper-wrapper recent-books-wrapper">
+                            <!-- JS에서 슬라이드 아이템이 들어갑니다 -->
+                        </div>                        
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+    
+            <section class="review-section">
+                <h2 class="review-title">리뷰</h2>
+
+                <!-- 평점 요약 헤더 -->
+                <div class="review-summary">
+                    <div class="rating-info">
+                        <span class="rating-score">3.3</span>
+                        <div class="rating-detail">
+                            <span class="rating-label">구매자 별점</span>
+                            <div class="star-rating static-stars">
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star full">★</span>
+                                <span class="star percent-30">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- 리뷰 작성 폼 -->
+                <div class="review-write-box">
+                    <p class="write-prompt">이 작품을 평가해 주세요!</p>
+
+                    <!-- 별점 입력 선택기 -->
+                    <div class="interactive-stars">
+                        <span class="star-input" data-value="1">★</span>
+                        <span class="star-input" data-value="2">★</span>
+                        <span class="star-input" data-value="3">★</span>
+                        <span class="star-input" data-value="4">★</span>
+                        <span class="star-input" data-value="5">★</span>
+                    </div>
+
+                    <!-- 리뷰 텍스트 입력 영역 -->
+                    <div class="textarea-wrapper">
+                        <textarea 
+                            class="review-textarea" 
+                            placeholder="리뷰를 10자 이상 입력해 주세요. 광고 및 욕설, 타인을 비방하는 문구는 비공개될 수 있습니다."
+                            maxlength="500"
+                        ></textarea>
+                        
+                        <div class="textarea-bottom">
+                            <label class="spoiler-label">
+                                <input type="checkbox" id="spoilerCheck" />
+                                <span class="checkbox-custom"></span>
+                                스포일러가 있습니다.
+                            </label>
+                            <button type="button" class="btn-submit-review" disabled>리뷰 등록</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>        
+
+        <div class="category-bestseller">            
+            <h2 class="bestseller-title">
+                <a href="/category/bestsellers/103" class="bestseller-link">
+                <span>일본 소설 베스트</span>
+                <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.53375 0.920861C2.33849 1.11612 2.33849 1.43271 2.53375 1.62797L5.4052 4.49941L2.53375 7.37086C2.33849 7.56612 2.33849 7.88271 2.53375 8.07797C2.72901 8.27323 3.0456 8.27323 3.24086 8.07797L6.46586 4.85297C6.55963 4.7592 6.6123 4.63202 6.6123 4.49941C6.6123 4.36681 6.55963 4.23963 6.46586 4.14586L3.24086 0.920861C3.0456 0.725599 2.72901 0.725599 2.53375 0.920861Z" fill="currentColor"></path>
+                </svg>
+                </a>
+            </h2>
+            
+            <ol class="bestseller-list">
+                <li>
+                    <a href="#">[50년 대여] 은하영웅전설+외전 세트 (전 15권)</a>
+                </li>
+                <li>
+                    <a href="#">비채 X 히가시노 게이고 컬렉션</a>
+                </li>
+                <li>
+                    <a href="#">마성의 아이</a>
+                </li>
+                <li>
+                    <a href="#">투명한 나선</a>
+                </li>
+                <li>
+                    <a href="#">용의자 X의 헌신</a>
+                </li>
+                <li>
+                    <a href="#">가면 산장 살인 사건</a>
+                </li>
+                <li>
+                    <a href="#">노르웨이의 숲</a>
+                </li>
+                <li>
+                    <a href="#">온고쿠</a>
+                </li>
+                <li>
+                    <a href="#">신 게임</a>
+                </li>
+                <li>
+                    <a href="#">교토탐정 홈즈 세트 (전 18권)</a>
+                </li>
+            </ol>
         </div>
     </div>
 
     <!-- 상세페이지 스크립트 연결 -->
     <script src="js/detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

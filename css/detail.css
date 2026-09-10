@@ -1,11 +1,16 @@
 @charset "utf-8";
 
 .detail-container{
+    display: flex;
     position: relative;
     max-width: 1170px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px;    
     margin: 0 auto;
+}
+
+.detail-container > .wrap{
+    width: calc(100% - 234px);
+    padding-right: 30px;
 }
 
 .book-detail-wrapper{    
@@ -32,7 +37,25 @@
     border-radius: 4px;
 }
 
-.detail-title{
+.detail-thumb-box > div > a{
+    margin: 0 auto;    
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    max-width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    background: #ffffff;
+    border-radius: 6px;
+    margin-top: 12px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;    
+}
+
+.detail-book-info .detail-title{
     line-height: 38px;
     margin-bottom: 12px;
 }
@@ -52,7 +75,11 @@
     color: #555555;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+}
+
+.detail-book-info{
+    width: 100%;
 }
 
 .detail-info-box .grade button{
@@ -100,7 +127,625 @@
     color: #555;
 }
 
+.detail-info-box > .info-container ul li{
+    font-size: 12px;
+}
+
+.detail-info-box > .info-container ul li + li{
+    margin-top: 4px;
+}
+
 .detail-info-box > div .detail-author, .detail-info-box > div .detail-publisher{
     color: #555;
     font-weight: 600;
+    font-size: 13px;
+}
+
+.detail-info-box .like-btn{
+    margin-top: 16px;
+}
+
+.detail-info-box .like-btn button{
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 30px;
+    padding: 1px 9.5px 0px 9.5px;
+    margin-right: 4px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid #1E9EFF;
+    color: #1E9EFF;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 13px;
+    line-height: 17px;
+    gap: 4px;    
+    background: transparent;
+}
+
+.select-container{
+    display: flex;
+    gap: 20px;
+    padding-top: 14px;
+    min-width: 0;
+    grid-area: bottom;
+}
+
+.select-container > .wrap{
+    display: flex;
+    padding: 8px 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+}
+
+.select-container > .wrap > div{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 16px;
+    width: 40px;
+    height: 19px;    
+    flex-shrink: 0;    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    border-radius: 2px;
+    color: #AAA068;
+    background-color: #EDE7D8;
+}
+
+.select-container > .wrap > a{
+    display: flex;
+    align-items: center;
+    width: 100%;    
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 23px;
+    transition: opacity 0.4s;
+    color: rgb(20, 20, 20);
+    font-weight: 500;
+}    
+
+.select-container > .wrap > a:hover{
+    opacity: .6;
+}
+
+.select-container > .wrap > a > span{
+    margin-left: auto;
+}
+
+.price-container{
+    margin-top: 20px;
+}
+
+.price-container .wrap{
+    display: flex;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;    
+}
+
+.price-container .wrap p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e6e6e6;
+    background: #fafafa;
+    color: #141414;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    width: 120px;
+}
+
+.price-container .wrap div{
+    width: calc(100% - 120px)
+}
+
+.price-container .wrap div ul{
+    padding: 10px 0 10px 14px;
+}
+
+.price-container .wrap div ul li{
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+}
+
+.price-container .wrap div ul li + li{
+    margin-top: 8px;
+}
+.price-container .wrap div ul li .detail-sale-price{    
+    font-weight: 500;
+}
+
+.price-container .wrap div ul li .detail-sale-price strong{
+    color: #dc3232;
+}
+
+.icon-container{
+    margin-top: 12px;
+}
+
+.icon-container .wrap button{
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    flex-shrink: 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    -webkit-transition: border 0.4s ease;
+    transition: border 0.4s ease;
+    width: 52px;
+    height: 52px;
+    background: none;
+}
+
+.icon-container ul{
+    display: flex;        
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.icon-container ul li svg{
+    font-size: 24px;
+}
+
+.icon-container ul li a{
+    flex: 1 1 227px;
+    width: 227px;
+    max-width: 227px;
+    height: 52px;    
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px 16px 10px;    
+    align-items: center;
+    border-radius: 6px;
+    background: #1E9EFF;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    white-space: nowrap;    
+}
+
+.book-info-card {
+    margin-top: 60px;
+    display: flex;
+    gap: 32px;
+    padding: 24px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.info-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-row dt {
+    width: 90px;
+    font-weight: 700;
+    color: #212529;
+    flex-shrink: 0;
+}
+
+.info-row dd {
+    flex: 1;
+    color: #787878;    
+    line-height: 1.4;
+}
+
+.info-row dd p, .info-row dd span{
+    color: #787878;
+}
+
+.divider {
+    margin: 0 6px;
+    color: #dee2e6;
+    font-size: 12px;
+}
+
+.environment-list .disabled {
+    color: #adb5bd;
+    text-decoration: line-through;
+}
+
+.icon {
+    margin-right: 4px;
+    font-style: normal;
+}
+
+.category-bestseller{
+    border-left: 1px solid #e6e6e6;
+    width: 234px;
+    padding: 30px 0 24px 30px;
+}
+
+.category-bestseller .bestseller-link{
+    display: flex;
+    align-items: center;
+    color: #141414;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+.category-bestseller .bestseller-link svg{
+    font-size: 12px;
+}
+
+.category-bestseller ol{
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+.category-bestseller ol li a{    
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #555555;
+    overflow: hidden;        
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
+}    
+
+.bestseller-list {
+    list-style: decimal;
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.bestseller-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bestseller-list li::marker{
+    color: #DC3232;
+    font-weight: 500;
+}
+
+.book-detail{
+    margin-top: 60px;
+}
+
+.book-detail .heading h1{
+    color: #141414;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0 3px;
+}
+
+.book-detail .heading p{
+    padding: 6px 0 16px;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    color: #141414;
+}
+
+.detail-container .tab-menu ul{
+    display: flex;    
+    align-items: center;        
+    width: 100%;
+    border-top: 2px solid #787878;
+}
+
+.detail-container .tab-menu ul li{    
+    flex: 1;
+    width: 100%;
+    color: #a5a5a5;
+    background-color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    white-space: nowrap;    
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+.detail-container .tab-menu li:last-child {
+    border-right: none;
+}
+
+.detail-container .tab-menu li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+.detail-container .tab-menu li.active {
+    border-bottom: 0;
+    background-color: #fff;
+}
+
+.detail-container .tab-menu li.active a {
+    color: #333;
+    border-bottom: 0;
+}
+
+.detail-container .tab-content {
+    padding: 20px;
+}
+
+.detail-container .tab-panel {
+    display: none;
+    line-height: 1.8;
+    color: #333;
+}
+
+.detail-container .tab-panel *{
+    color: #555;
+}
+
+.detail-container .tab-panel.active {
+    display: block;
+}
+
+.detail-container .toc-list {
+    padding-left: 20px;
+}
+.detail-container .toc-list li {
+    margin-bottom: 8px;
+}
+
+.recent-books{
+    position: relative;
+    margin-top: 80px;
+}
+
+.recent-books .img-box img{
+    display: block;
+    width: 100%;
+}
+
+.recent-books .heading p{
+    padding: 6px 0 16px;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    color: #141414;
+}
+
+/* 리뷰 전체 컨테이너 */
+.review-section {    
+    margin-top: 80px; 
+    margin-bottom: 80px;   
+    color: #333;
+}
+
+.review-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* 평점 요약 헤더 */
+.review-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating-score {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.rating-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rating-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.static-stars {
+    color: #e6e6e6;
+    font-size: 16px;
+}
+
+.static-stars .star.full {
+    color: #ff4b5c; /* 리디북스 스타일 레드-핑크 */
+}
+
+.static-stars {
+    font-size: 16px;
+    letter-spacing: -1px; /* 별 사이 간격 정돈 */
+}
+
+/* 1, 2, 3번째: 꽉 찬 별 */
+.static-stars .star.full {
+    color: #ff4b5c;
+}
+
+/* 4번째: 30% 채워진 별 (3.3점) */
+.static-stars .star.percent-30 {
+    background: linear-gradient(90deg, #ff4b5c 30%, #e0e0e0 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 5번째: 완전히 비어있는 회색 별 */
+.static-stars .star.empty {
+    color: #e0e0e0;
+}
+
+.static-stars .star.half {
+    background: linear-gradient(90deg, #ff4b5c 50%, #e0e0e0 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rating-meta {
+    text-align: right;
+    font-size: 13px;
+    color: #888;
+}
+
+.btn-distribution {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+}
+
+/* 리뷰 작성 박스 */
+.review-write-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.write-prompt {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+/* 별점 선택 */
+.interactive-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 38px;
+    color: #e2e8f0;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.interactive-stars .star-input {
+    transition: color 0.15s ease;
+    user-select: none;
+    color: #e6e6e6;
+}
+
+.interactive-stars .star-input:hover {
+    color: #ff4b5c;
+}
+
+/* 텍스트 입력창 상자 */
+.textarea-wrapper {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    text-align: left;
+    transition: border-color 0.2s;
+}
+
+.textarea-wrapper:focus-within {
+    border-color: #a0aec0;
+}
+
+.review-textarea {
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.review-textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* 하단 스포일러 체크 및 버튼 */
+.textarea-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+.spoiler-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+}
+
+.spoiler-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #888;
+    cursor: pointer;
+}
+
+.btn-submit-review {
+    padding: 10px 20px;
+    background-color: #d1d5db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: not-allowed;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-review.active {
+    background-color: #ff4b5c;
+    cursor: pointer;
+}
+
+.interactive-stars .star-input {
+    cursor: pointer;
+    color: #e2e8f0; 
+    transition: color 0.15s ease-in-out;
+}
+
+/* 활성화 상태: 마우스 호버 또는 선택된 별 색상 */
+.interactive-stars .star-input.active {
+    color: #ff4b5c !important;
 }

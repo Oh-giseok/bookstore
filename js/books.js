@@ -65,11 +65,12 @@ async function initSection1() {
             if (data.documents && data.documents[0]) {
                 const doc = data.documents[0];
                 const bigThumbnail = getHighResThumbnail(doc.thumbnail);
-
-                // 1. 클릭한 책의 제목을 URL 파라미터로 만든 주소 생성
                 const detailUrl = `detail.html?title=${encodeURIComponent(doc.title)}`;
 
-                // 2. 외부 링크(doc.url) 대신 detail.html 주소(detailUrl)로 연결
+                // 랜덤 평점 및 리뷰 수 생성
+                const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                 slidesHTML += `
                     <div class="swiper-slide product-item">
                         <a href="${detailUrl}" class="ridi-book-link">
@@ -77,7 +78,10 @@ async function initSection1() {
                         </a>
                         <div class="book-info">
                             <div class="book-title"><a href="${detailUrl}">${doc.title}</a></div>
-                            <div class="book-author"><a href="${detailUrl}">${doc.authors ? doc.authors.join(', ') : ''}</a></div>                        
+                            <div class="book-author"><a href="${detailUrl}">${doc.authors ? doc.authors.join(', ') : ''}</a></div>
+                            <div class="book-rating">
+                                <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -125,6 +129,10 @@ async function initSection2() {
                     const rank = page * booksPerPage + idx + 1;
                     const bigThumbnail = getHighResThumbnail(doc.thumbnail);
 
+                    // 랜덤 평점 및 리뷰 수 생성
+                    const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                    const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                     listItemsHTML += `
                         <li class="product-item-horizontal">
                             <a href="${doc.url}" target="_blank" class="ridi-book-link">
@@ -134,6 +142,9 @@ async function initSection2() {
                             <div class="book-info">
                                 <div class="book-title"><a href="${doc.url}" target="_blank">${doc.title}</a></div>
                                 <div class="book-author"><a href="${doc.url}" target="_blank">${doc.authors ? doc.authors.join(', ') : ''}</a></div>
+                                <div class="book-rating">
+                                    <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                                </div>
                             </div>
                         </li>
                     `;
@@ -185,6 +196,10 @@ async function initSection4() {
                 if (!doc.thumbnail) return;
                 const bigThumbnail = getHighResThumbnail(doc.thumbnail);
 
+                // 랜덤 평점 및 리뷰 수 생성
+                const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                 slidesHTML4 += `
                     <div class="swiper-slide product-item">
                         <a href="${doc.url}" target="_blank" class="ridi-book-link">
@@ -193,6 +208,9 @@ async function initSection4() {
                         <div class="book-info">
                             <div class="book-title"><a href="${doc.url}" target="_blank">${doc.title}</a></div>
                             <div class="book-author"><a href="${doc.url}" target="_blank">${doc.authors ? doc.authors.join(', ') : ''}</a></div>
+                            <div class="book-rating">
+                                <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -217,7 +235,7 @@ async function initSection4() {
 }
 
 // ------------------------------------------------------------------
-// [Section 6] - 다른 작가 도서 전용
+// [Section 6] - 김애란 작가 도서 전용
 // ------------------------------------------------------------------
 async function initSection6() {
     const authorName = "김애란";
@@ -235,6 +253,10 @@ async function initSection6() {
                 if (!doc.thumbnail) return;
                 const bigThumbnail = getHighResThumbnail(doc.thumbnail);
 
+                // 랜덤 평점 및 리뷰 수 생성
+                const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                 slidesHTML6 += `
                     <div class="swiper-slide product-item">
                         <a href="${doc.url}" target="_blank" class="ridi-book-link">
@@ -243,6 +265,9 @@ async function initSection6() {
                         <div class="book-info">
                             <div class="book-title"><a href="${doc.url}" target="_blank">${doc.title}</a></div>
                             <div class="book-author"><a href="${doc.url}" target="_blank">${doc.authors ? doc.authors.join(', ') : ''}</a></div>                        
+                            <div class="book-rating">
+                                <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -267,7 +292,7 @@ async function initSection6() {
 }
 
 // ------------------------------------------------------------------
-// [Section 7] - 다른 작가 도서 전용
+// [Section 7] - 매들린 밀러 작가 도서 전용
 // ------------------------------------------------------------------
 async function initSection7() {
     const authorName = "매들린 밀러";
@@ -285,6 +310,10 @@ async function initSection7() {
                 if (!doc.thumbnail) return;
                 const bigThumbnail = getHighResThumbnail(doc.thumbnail);
 
+                // 랜덤 평점 및 리뷰 수 생성
+                const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                 slidesHTML7 += `
                     <div class="swiper-slide product-item">
                         <a href="${doc.url}" target="_blank" class="ridi-book-link">
@@ -293,6 +322,9 @@ async function initSection7() {
                         <div class="book-info">
                             <div class="book-title"><a href="${doc.url}" target="_blank">${doc.title}</a></div>
                             <div class="book-author"><a href="${doc.url}" target="_blank">${doc.authors ? doc.authors.join(', ') : ''}</a></div>                        
+                            <div class="book-rating">
+                                <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -316,13 +348,16 @@ async function initSection7() {
     }
 }
 
-async function initSection8() {
+// ------------------------------------------------------------------
+// [Section 9] - 지정 도서 전용
+// ------------------------------------------------------------------
+async function initSection9() {
     const bookTitles = [
         "주식의 시대", "돈의 권력", "AI 시대의 플랫폼 비즈니스", "읽고 쓰고 소유하다",
         "새로운 부의 시대", "개정판 | 소상공인을 위한 빅데이터 상권분석", "금에 투자하라", "정해진 미래 시장의 기회"
     ];
 
-    const swiperWrapper = document.querySelector('.section-8 .swiper-wrapper, #section-8 .swiper-wrapper');
+    const swiperWrapper = document.querySelector('.section-9 .swiper-wrapper, #section-9 .swiper-wrapper');
     if (!swiperWrapper) return;
 
     let slidesHTML = '';
@@ -334,6 +369,10 @@ async function initSection8() {
                 const doc = data.documents[0];
                 const bigThumbnail = getHighResThumbnail(doc.thumbnail);
 
+                // 랜덤 평점 및 리뷰 수 생성
+                const randomRating = (Math.random() * (5.0 - 3.0) + 3.0).toFixed(1);
+                const randomReviews = Math.floor(Math.random() * 20) + 1;
+
                 slidesHTML += `
                     <div class="swiper-slide product-item">
                         <a href="${doc.url}" target="_blank" class="ridi-book-link">
@@ -342,6 +381,9 @@ async function initSection8() {
                         <div class="book-info">
                             <div class="book-title"><a href="${doc.url}" target="_blank">${doc.title}</a></div>
                             <div class="book-author"><a href="${doc.url}" target="_blank">${doc.authors ? doc.authors.join(', ') : ''}</a></div>                        
+                            <div class="book-rating">
+                                <span class="star">★</span>${randomRating} <span class="review-count">(${randomReviews})</span>
+                            </div>
                         </div>
                     </div>
                 `;
@@ -359,8 +401,8 @@ async function initSection8() {
         observer: true,
         observeParents: true,
         navigation: {
-            nextEl: '.section-8 .swiper-button-next',
-            prevEl: '.section-8 .swiper-button-prev',
+            nextEl: '.section-9 .swiper-button-next',
+            prevEl: '.section-9 .swiper-button-prev',
         }
     });
 }
@@ -371,6 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initSection2();
     initSection4();
     initSection6();
-    initSection7();
-    initSection8();
+    initSection7();    
+    initSection9();
 });
