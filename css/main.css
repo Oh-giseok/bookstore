@@ -28,7 +28,7 @@
     font-size: 20px;
 }
 
-.header-top .header-right .header-search label {
+.header-top .header-right .header-search .search-form {
     display: flex;
     align-items: center;
     height: 40px;
@@ -37,7 +37,7 @@
     border-radius: 8px;
 }
 
-.header-search label > svg path{    
+.header-search .search-form > svg {    
     color: #a5a5a5;
     font-size: 20px;
     margin-right: 12px;
@@ -76,7 +76,7 @@
     color: rgb(120, 120, 120);
 }
 
-.header-top .header-right .header-search label > button:not(.search-clear) {
+.header-top .header-right .header-search .search-form > button:not(.search-clear) {
     position: absolute;
     width: 1px;
     height: 1px;

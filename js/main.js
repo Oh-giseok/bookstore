@@ -1,3 +1,20 @@
+// 공통 헤더 불러오기 함수
+async function loadHeader() {
+    const headerContainer = document.querySelector('.header-container');
+    if (!headerContainer) return;
+
+    try {
+        const response = await fetch('header.html');
+        if (response.ok) {
+            headerContainer.innerHTML = await response.text();
+        } else {
+            console.error('header.html을 찾을 수 없습니다.');
+        }
+    } catch (err) {
+        console.error('헤더 불러오기 오류:', err);
+    }
+}
+
 const input = document.querySelector('.header-search input');
 const clearBtn = document.querySelector('.search-clear');
 
